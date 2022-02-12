@@ -3,50 +3,48 @@
 // jose.montoyam@upb.edu.co
 (START)
 @16384
-D = A
+D=A
 @1
-M = D
+M=D
 @1
-D = M
+D=M
 @2
-D = M
+M=D
 @24576
-D = M
+D=M
 @70
-D = D - A
+D=D-A
+@27
+D;JNE
+@2
+D=M
+@24575
+D=D-A
 @4
-D;JEQ
+D;JGT
+@2
+A=M
+M=-1
+@2
+M=M+1
+@14
+0;JMP
 @24576
-D = M
+D=M
 @67
-D = D - A
+D=D-A
 @4
-D;JEQ
-@22
-0;JMP
+D;JNE
 @2
-D = M
-@24576
-D = D - A
+D=M
+@24575
+D=D-A
 @4
 D;JGT
 @2
-A = M
-M = -1
+A=M
+M=0
 @2
-M = M+1
-@22
-0;JMP
-@2
-D = M
-@24576
-D = D - A
-@4
-D;JGT
-@2
-A = M
-M = 0
-@2
-M = M+1
-@35
+M=M+1
+@33
 0;JMP
